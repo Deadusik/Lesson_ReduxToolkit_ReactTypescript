@@ -6,7 +6,7 @@ export const fetchUsers = createAsyncThunk(
     'user/fetchAll',
     async (_, thunkAPI) => {
         try {
-            const response = await axios.get<IUser[]>('https://j1sonplaceholder.typicode.com/users')
+            const response = await axios.get<IUser[]>('https://jsonplaceholder.typicode.com/users')
             return response.data
         } catch (e) {
             if (e instanceof Error)

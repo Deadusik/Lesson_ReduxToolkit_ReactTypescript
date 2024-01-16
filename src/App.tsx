@@ -1,10 +1,10 @@
 import { useAppDispatch, useAppSelector } from "./hooks/redux"
 import { useEffect } from "react"
 import { fetchUsers } from "./store/reducers/ActionCreators"
+import { PostContainer } from "./components/PostContainer"
 
 
 export const App = () => {
-
     const dispatch = useAppDispatch()
     const { users, isLoading, error } = useAppSelector(state => state.userReducer)
 
@@ -14,6 +14,7 @@ export const App = () => {
 
     return (
         <div>
+            <PostContainer />
             {
                 isLoading ?
                     <h1>Loading...</h1>
